@@ -1,0 +1,40 @@
+id: idc_default_migration_menu_link_main
+migration_group: idc_initial_setup
+label: 'Create main menu links'
+source:
+  plugin: embedded_data
+  data_rows:
+    -
+      id: 2
+      title: 'Sheridan Libraries'
+      menu_name: 'main'
+      link: 'http://library.jhu.edu'
+      description: 'ssssaaws sdkls'
+      weight: 2
+      expanded: 0
+    -
+      id: 3
+      title: 'Welch Medical Library'
+      menu_name: 'main'
+      link: 'http://welch.jhmi.edu'
+      description: 'ssssss'
+      weight: 3
+      expanded: 1
+  ids:
+    id:
+      type: integer
+process:
+  bundle:
+    plugin: default_value
+    default_value: menu_link_content
+  title: title
+  menu_name: menu_name
+  link/uri:
+    plugin: default_value
+    source: link
+  weight: weight
+  expanded: expanded
+  link/options: '@opts'
+  description: description
+destination:
+  plugin: entity:menu_link_content

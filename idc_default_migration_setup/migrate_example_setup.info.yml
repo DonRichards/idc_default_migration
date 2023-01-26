@@ -1,0 +1,9 @@
+type: module
+name: IDC Default Migration Setup
+description: 'Separate site configuration for the example from the actual migration.'
+package: Migration
+core_version_requirement: '>=9.1'
+hidden: true
+dependencies:
+  - drupal:text
+  - drupal:options

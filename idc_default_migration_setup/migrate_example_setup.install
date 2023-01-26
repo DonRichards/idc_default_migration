@@ -1,0 +1,32 @@
+<?php
+
+declare(strict_types = 1);
+
+/**
+ * @file
+ * Install file for IDC Default migration module.
+ *
+ * Set up source data and destination configuration for the migration example
+ * module. We do this in a separate module so idc_default_migration itself is a pure
+ * migration module.
+ */
+
+/**
+ * Implements hook_schema().
+ */
+function idc_default_migration_setup_schema(): array {
+  $schema = [];
+  // $schema['idc_default_migration_beer_account'] = idc_default_migration_beer_schema_account();
+
+  return $schema;
+}
+
+/**
+ * Implements hook_install().
+ */
+function idc_default_migration_setup_install(): void {
+  // Populate our tables.
+  // idc_default_migration_beer_data_account();
+}
+
+
