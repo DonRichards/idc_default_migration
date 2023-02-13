@@ -42,3 +42,6 @@ drush migrate:rollback idc_default_migration_menu_link_main
 
 # If there's a problem with the config and you need it removed.
 drush config:delete migrate_plus.migration.idc_default_migration_menu_link_main
+
+# To reimport the config after editing. This uses drupal console. You can either add vendor/bin/drupal/consoledrupal or use the makefile's jhu_enable_dev_tools to add the drupal command to your path.
+drupal config:import:single --file="/var/www/drupal/web/modules/contrib/idc_default_migration/config/install/migrate_plus.migration.idc_default_migration_menu_link_main.yml"
