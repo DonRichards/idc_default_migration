@@ -2,7 +2,8 @@ type: module
 name: IDC Default Migration
 description: 'Generic migration module for IDC'
 package: Examples
-core_version_requirement: '>=9.1'
+core: 9.x
+core_version_requirement: ^9 || ^10
 dependencies:
   - drupal:migrate
   - migrate_plus:migrate_plus
